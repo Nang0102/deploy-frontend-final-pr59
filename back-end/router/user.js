@@ -7,12 +7,13 @@ const jwt =require('jsonwebtoken')
 const jwtKey = require("./key");
 
 userRouter.post("/sign-up", async (req, res) => {
-    const { username, password } = req.body;
+    const { username,email, password } = req.body;
     const saltRounds = 10;
     await bcrypt.hash(password, saltRounds,async function(err, hash) {
         
         const respond = await db.users.insertOne({
           username,
+          email,
           password: hash,
         });
 
@@ -38,7 +39,7 @@ userRouter.post("/sign-up", async (req, res) => {
     res.json("User is not existed");
     return;
   }
-
+//
   const token = jwt.sign(userFromDB, jwtKey);
   res.json({ token: token });
 });

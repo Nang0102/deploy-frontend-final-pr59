@@ -14,7 +14,8 @@ app.get('/', (req, res  ) => {
 app.use('/user',userRouter)
 
 
-app.listen(3000, () => {
-    console.log('App is running on port 3000')
-    connectToDb()
-})
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+console.log("This is" + port);
+connectToDb();
+});
