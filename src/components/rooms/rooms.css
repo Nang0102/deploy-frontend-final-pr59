@@ -1,0 +1,13 @@
+.content-rooms {
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+    background-image: url("https://erios.webhotel.vn/images/rooms-breadcrumbs.jpg");
+}
+
+.text-rooms {
+    color: #ffff;
+    position: center;
+    padding-top: 10%;
+    font-size: 300%;
+}

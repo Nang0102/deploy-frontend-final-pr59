@@ -1,0 +1,10 @@
+.row-style {
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.inner-style {
+    margin: 25px;
+}

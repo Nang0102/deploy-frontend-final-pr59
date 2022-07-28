@@ -103,7 +103,7 @@ function Login() {
                 placeholder="Username"
                 value={username}
                 onChange={(e) => {
-                  setUsername(e.target.value.trim());
+                  setUsername(e.target.value);
                 }}
                 required
               />
