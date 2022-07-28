@@ -27,22 +27,17 @@ export const Search = ({ placeholder, data }) => {
   };
 
   return (
-    <div>
-      {/* <h1 className="title">
-        <strong>Tìm kiếm</strong>
-      </h1>
-      <div className="hr"></div>
-      <br /> */}
+    <div className="search-title">
       <div className="search">
+        <strong>Tìm kiếm</strong>
+
         <div className="searchInputs">
-          <button>
-            <input
-              type="text"
-              placeholder={placeholder}
-              value={wordEntered}
-              onChange={handleFilter}
-            />
-          </button>
+          <input
+            type="text"
+            placeholder={placeholder}
+            value={wordEntered}
+            onChange={handleFilter}
+          />
           <div className="searchIcon">
             {filteredData.length === 0 ? (
               <SearchIcon />
@@ -62,9 +57,7 @@ export const Search = ({ placeholder, data }) => {
                     // href={`${window.location.origin.toString()}/san-pham/${
                     //   value.id
                     // }`}
-                    href={
-                      "https://backenfinal-prweb59.herokuapp.com/user/sign-up"
-                    }
+                    href={"http://127.0.0.1:5000/user/login"}
                     rel="noopener"
                   >
                     <p> {value.name}</p>

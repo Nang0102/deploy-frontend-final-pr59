@@ -3,6 +3,10 @@
     display: flex;
 }
 
+.search-title {
+    display: flex;
+}
+
 .search input {
     background-color: rgb(233, 220, 220);
     border: 1 solid black;
@@ -12,7 +16,7 @@
     font-size: 18px;
     padding: 15px;
     height: 30px;
-    width: 300px;
+    width: 95%;
 }
 
 .searchIcon {
