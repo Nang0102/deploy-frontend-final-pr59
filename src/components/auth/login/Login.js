@@ -39,10 +39,11 @@ function Login() {
 
     try {
       const data = await handleSubmit(email, username, password);
+      console.log(data);
       if (data.data && data.data.errCode !== 0) {
         setErrMessage(data.data.message);
       } else {
-        localStorage.setItem("user", JSON.stringify({ email, username }));
+        localStorage.setItem("user_token", JSON.stringify(data.data.token));
         setLogin(true);
         navigate("/");
       }
@@ -57,7 +58,7 @@ function Login() {
   };
 
   const handleSubmit = (email, username, password) => {
-    return axios.post("https://backenfinal-prweb59.herokuapp.com/user/login", {
+    return axios.post("http://127.0.0.1:5000/user/login", {
       email,
       username,
       password,
@@ -103,7 +104,7 @@ function Login() {
                 placeholder="Username"
                 value={username}
                 onChange={(e) => {
-                  setUsername(e.target.value.trim());
+                  setUsername(e.target.value);
                 }}
                 required
               />

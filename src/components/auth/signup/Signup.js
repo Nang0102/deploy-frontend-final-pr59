@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import axios from "axios";
 import { LoginContext } from "../../../context/AuthContext";
 import "./signup.css";
 
@@ -7,31 +8,79 @@ function Signup() {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
+  const [errMessage, setErrMessage] = useState("");
 
   const clickSignin = () => {
     setSignup(true);
   };
 
+  const handleSubmit = (email, username, password) => {
+    return axios.post("http://127.0.0.1:5000/user/sign-up", {
+      email,
+      username,
+      password,
+    });
+  };
+
   const handleSignup = async (e) => {
     e.preventDefault();
-    const url = "https://backenfinal-prweb59.herokuapp.com/user/sign-up";
-    const data = { email, username, password };
-    const response = await fetch(url, {
-      method: "POST",
-      cache: "no-cache",
-      credentials: "same-origin",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      redirect: "follow",
-      referrerPolicy: "no-referrer",
-      body: JSON.stringify(data),
-    });
+    setErrMessage("");
+    try {
+      const data = await handleSubmit(email, username, password);
+      // if (
+      //   !/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
+      //     email
+      //   )
+      // ) {
+      //   setErrMessage("Invalid email!");
+      // }
+      // if (password.length < 8) {
+      //   setErrMessage("Password: 8 characters minimum!");
+      // }
 
-    setSignup(true);
+      // if (data.data && data.data.errCode !== 0) {
+      //   // setErrMessage(data.data.message);
+      // // } else {
+      //   setSignup(true);
+      // }
 
-    return response.clone().json();
+      if (data.data && data.data.errCode !== 0) {
+        setErrMessage(data.data.message);
+      }
+      setEmail("");
+      setPassword("");
+      setUsername("");
+      setSignup(true);
+    } catch (e) {
+      if (e.response) {
+        if (e.response.data) {
+          setErrMessage(e.response.data.message);
+        }
+      }
+      console.log("error", e.response);
+    }
   };
+
+  // const handleSignup = async (e) => {
+  //   e.preventDefault();
+  //   const url = "http://127.0.0.1:5000/user/sign-up";
+  //   const data = { email, username, password };
+  //   const response = await fetch(url, {
+  //     method: "POST",
+  //     cache: "no-cache",
+  //     credentials: "same-origin",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     redirect: "follow",
+  //     referrerPolicy: "no-referrer",
+  //     body: JSON.stringify(data),
+  //   });
+
+  //   setSignup(true);
+
+  //   return response.clone().json();
+  // };
 
   return (
     <div className="signupScreen">
@@ -51,7 +100,7 @@ function Signup() {
           placeholder="Username"
           value={username}
           onChange={(e) => {
-            setUsername(e.target.value.trim());
+            setUsername(e.target.value);
           }}
           required
         />
@@ -64,6 +113,8 @@ function Signup() {
           }}
           required
         />
+
+        <div className="err_message">{errMessage}</div>
 
         <button type="submit" onClick={handleSignup}>
           Sign Up
