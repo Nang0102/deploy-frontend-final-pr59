@@ -11,7 +11,7 @@ export const Search = ({ placeholder, data }) => {
     const searchWord = e.target.value;
     setWordEntered(searchWord);
     const newFilter = data.filter((value) => {
-      return value.name.toLowerCase().includes(searchWord.toLowerCase());
+      return value.title.toLowerCase().includes(searchWord.toLowerCase());
     });
 
     if (searchWord === "") {
@@ -29,9 +29,9 @@ export const Search = ({ placeholder, data }) => {
   return (
     <div className="search-title">
       <div className="search">
-        <strong>Tìm kiếm</strong>
-
         <div className="searchInputs">
+          <strong>Tìm kiếm</strong>
+
           <input
             type="text"
             placeholder={placeholder}
@@ -49,18 +49,15 @@ export const Search = ({ placeholder, data }) => {
         {filteredData.length !== 0 && (
           <div className="dataResult">
             {filteredData.slice().map((value, key) => {
-              console.log(value.image);
               return (
                 <div>
                   <a
                     className="dataItem"
-                    // href={`${window.location.origin.toString()}/san-pham/${
-                    //   value.id
-                    // }`}
-                    href={"http://127.0.0.1:5000/user/login"}
-                    rel="noopener"
+                    href={`${window.location.origin.toString()}/rooms/${
+                      value._id
+                    }`}
                   >
-                    <p> {value.name}</p>
+                    <p> {value.title}</p>
                   </a>
                 </div>
               );

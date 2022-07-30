@@ -2,7 +2,6 @@
     height: 400px;
     width: 100%;
     background-size: cover;
-    background-image: url("https://erios.webhotel.vn/images/rooms-breadcrumbs.jpg");
 }
 
 .text-rooms {
@@ -13,5 +12,6 @@
 }
 
 .search-room {
-    padding-left: 65%;
+    display: flex;
+    padding-left: 60%;
 }

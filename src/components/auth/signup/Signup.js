@@ -14,7 +14,7 @@ function Signup() {
 
   const handleSignup = async (e) => {
     e.preventDefault();
-    const url = "https://backenfinal-prweb59.herokuapp.com/user/sign-up";
+    const url = "http://127.0.0.1:5000/user/sign-up";
     const data = { email, username, password };
     const response = await fetch(url, {
       method: "POST",
