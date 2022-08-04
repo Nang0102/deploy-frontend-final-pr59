@@ -1,13 +1,14 @@
 import "./Style.css";
-// import { Title } from "./Title";
-import useFetch from "./useEffect";
+import { Title } from "./Title";
+// import useFetch from "./useEffect";
 export const Style = () => {
-  const { data } = useFetch("http://127.0.0.1:5000/user/rooms");
-  console.log(data);
+  // const { data } = useFetch("http://127.0.0.1:5000/user/room");
+  // console.log(data);
   return (
     <div>
       <div className="row-style">
-        {/* <Title
+        <Title
+          href="Luxury Rooms"
           img="	https://erios.webhotel.vn/images/room-5-768x624.jpg"
           title="Luxury Rooms"
         />
@@ -39,7 +40,7 @@ export const Style = () => {
         <Title
           img="	https://erios.webhotel.vn/images/room-1-768x624.jpg"
           title="Double Rooms"
-        /> */}
+        />
       </div>
     </div>
   );

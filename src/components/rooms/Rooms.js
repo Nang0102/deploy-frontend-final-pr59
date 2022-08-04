@@ -1,7 +1,8 @@
 import "./rooms.css";
 import { Search } from "./Search/Search";
 import { Style } from "./Styles/Style";
-import roomData from "./rooms.json";
+import roomData from "./room.json";
+
 const Room = () => {
   return (
     <div>

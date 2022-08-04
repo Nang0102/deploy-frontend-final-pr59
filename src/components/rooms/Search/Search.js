@@ -53,10 +53,11 @@ export const Search = ({ placeholder, data }) => {
                 <div>
                   <a
                     className="dataItem"
-                    href={`${window.location.origin.toString()}/rooms/${
+                    href={`${window.location.origin.toString()}/room/${
                       value._id
                     }`}
                   >
+                    {/* <a className="dataItem" href={`/room/${value._id}`}> */}
                     <p> {value.title}</p>
                   </a>
                 </div>

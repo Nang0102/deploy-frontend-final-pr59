@@ -1,4 +1,5 @@
 import "../rooms.css";
+import ImageDetail from "./ImageDetails/ImageDetail";
 
 export const Detail = () => {
   return (
@@ -11,6 +12,7 @@ export const Detail = () => {
         }}
       >
         <p className="text-rooms">Rooms Detail</p>
+        <ImageDetail />
       </div>
     </div>
   );

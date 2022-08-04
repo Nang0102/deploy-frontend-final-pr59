@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 const useFetch = (
-  url = "http://127.0.0.1:5000/user/rooms",
-  title,
-  image = null
+  url = "http://127.0.0.1:5000/user/room",
+  { title, image } = null
 ) => {
   const [data, setData] = useState(null);
   useEffect(() => {
