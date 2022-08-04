@@ -1,7 +1,25 @@
 import "../rooms.css";
-import ImageDetail from "./ImageDetails/ImageDetail";
+// import ImageDetail from "./ImageDetails/ImageDetail";
+import { React, useState, useEffect } from "react";
+import { axios } from "axios";
 
 export const Detail = () => {
+  const url = "http://127.0.0.1:5000/user/room";
+  const [room, setRoom] = useState(null);
+  //
+  let content = null;
+  useEffect(() => {
+    axios.get(url).then((response) => {
+      setRoom(response.data);
+    });
+  }, [url]);
+  if (room) {
+    content = (
+      <div>
+        <h1>{room.title}</h1>
+      </div>
+    );
+  }
   return (
     <div>
       <div
@@ -12,7 +30,7 @@ export const Detail = () => {
         }}
       >
         <p className="text-rooms">Rooms Detail</p>
-        <ImageDetail />
+        {content}
       </div>
     </div>
   );
