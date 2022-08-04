@@ -1,7 +1,8 @@
 import "./rooms.css";
 import { Search } from "./Search/Search";
-import { Style } from "./Styles/Style";
+// import { Style } from "./Styles/Style";
 import roomData from "./rooms.json";
+import { Detail } from "./Detail/Detail";
 const Room = () => {
   return (
     <div>
@@ -18,7 +19,8 @@ const Room = () => {
         <Search placeholder="Search..." data={roomData} />
       </div>
       <div>
-        <Style />
+        {/* <Style /> */}
+        <Detail />
       </div>
     </div>
   );
