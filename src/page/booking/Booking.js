@@ -9,13 +9,13 @@ import { FaHotel } from "react-icons/fa";
 import "./booking.css";
 
 function Booking() {
-  const [showClass, setShowClass] = useState(false)
-  const addShowClass = () => {
-    setShowClass(!showClass)
-  }
+  // const [showClass, setShowClass] = useState(false);
+  // const addShowClass = () => {
+  //   setShowClass(!showClass);
+  // };
   return (
     <div className="booking-container">
-      <header>
+      {/* <header>
         <nav>
           <div className="row">
             <img
@@ -47,11 +47,11 @@ function Booking() {
             </div>
           </div>
         </nav>
-      </header>
+      </header> */}
 
-      <h1> Resort Booking Form</h1>
-      
-      <div className="container">
+      <p className="booking-container-h1"> Resort Booking Form</p>
+
+      <div className="booking-item">
         <div className="title">Book Now</div>
         <div className="content">
           <form action="#">
@@ -83,7 +83,7 @@ function Booking() {
               <div className="input-box">
                 <FaCalendarAlt className="icon" />
                 <input
-                  style={{color: '#fff'}}
+                  style={{ color: "#fff" }}
                   type="date"
                   id="input-group"
                   placeholder="Departure Date"

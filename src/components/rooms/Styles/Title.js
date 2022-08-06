@@ -16,9 +16,9 @@ export const Title = (props) => {
       <div className="style-title">
         <h3> {props.title}</h3>
         <div>
-          <a href>20m2 </a>
+          <a href>20m2 |</a>
 
-          <a href>Balcony</a>
+          <a href>Balcony |</a>
 
           <a href>Lake View</a>
         </div>
