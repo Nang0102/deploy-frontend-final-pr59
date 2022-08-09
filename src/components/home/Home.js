@@ -50,7 +50,7 @@ function Home() {
               </div>
               <NavLink
                 className=" buttonn font-serif flex hover:bg-white "
-                to="/Book"
+                to="/The-Booking"
               >
                 READ MORE <FontAwesomeIcon icon={faArrowRight} />{" "}
               </NavLink>
@@ -99,7 +99,7 @@ function Home() {
                 </div>
                 <NavLink
                   className=" buttonn font-serif flex hover:bg-white "
-                  to="/Book"
+                  to="/The-Booking"
                 >
                   LEARN MORE <FontAwesomeIcon icon={faArrowRight} />{" "}
                 </NavLink>
@@ -112,7 +112,7 @@ function Home() {
                 </div>
                 <NavLink
                   className=" buttonn font-serif flex hover:bg-white "
-                  to="/Book"
+                  to="/The-Booking"
                 >
                   LEARN MORE <FontAwesomeIcon icon={faArrowRight} />{" "}
                 </NavLink>
@@ -136,7 +136,7 @@ function Home() {
                 </div>
                 <NavLink
                   className=" buttonn font-serif flex hover:bg-white "
-                  to="/Book"
+                  to="/The-Booking"
                 >
                   LEARN MORE <FontAwesomeIcon icon={faArrowRight} />{" "}
                 </NavLink>

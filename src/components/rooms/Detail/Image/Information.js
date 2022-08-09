@@ -2,7 +2,9 @@ export const Information = () => {
   return (
     <div>
       <div>
-        <ul>
+        <strong>INFORMATION</strong>
+        <div className="hr"></div>
+        <ul style={{ lineHeight: "300%", marginLeft: "40px" }}>
           <li>Room Service</li>
           <li>Balcony / Terrace</li>
           <li>Bathroom Amenities</li>

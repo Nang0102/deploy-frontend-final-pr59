@@ -20,22 +20,22 @@ const NavLinks = (props) => {
             ROOMS
           </NavLink>
         </li>
-        <li>
+        {/* <li>
           <NavLink className="menu-name" to="/Amenities">
             AMENITIES
           </NavLink>
-        </li>
+        </li> */}
 
         {/* <li>
           <NavLink className="menu-name" to="/Gallery">
             GALLERY
           </NavLink>
-        </li>
+        </li> */}
         <li>
-          <NavLink className="menu-name" to="/Page">
+          <NavLink className="menu-name" to="/Rooms/:id">
             PAGE
           </NavLink>
-        </li> */}
+        </li>
         <li>
           <NavLink className="menu-name" to="/Contact">
             CONTACT

@@ -4,17 +4,19 @@ export const Contact = () => {
   return (
     <div>
       <div>
-        <div className="title">
-          <h1>
-            <strong>Liên hệ</strong>
-          </h1>
-          <div className="hr"></div>
-          <br />
+        <div
+          className="content-rooms"
+          style={{
+            backgroundImage:
+              "url('https://erios.webhotel.vn/images/Contact.jpg')",
+          }}
+        >
+          <p className="text-rooms">Contact</p>
         </div>
-        <p>Địa chỉ chúng tôi</p>
+        {/* <p>Địa chỉ chúng tôi</p>
         <b>4th Floor, 147 Mai Dich Street, Cau Giay District, Hanoi</b>
         <br />
-        <br />
+        <br /> */}
         <iframe
           title="map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.8236793395135!2d105.774373!3d21.0397399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454c9bc0a304f%3A0xcf7e439a69beb3de!2zNDcgUC4gTWFpIEThu4tjaCwgTWFpIEThu4tjaCwgQ-G6p3UgR2nhuqV5LCBIw6AgTuG7mWk!5e0!3m2!1svi!2s!4v1659111791611!5m2!1svi!2s"

@@ -6,6 +6,8 @@ import { faArrowRight, faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 // import "./HandleImageDetail";
 import { React, useState, useEffect } from "react";
 import axios from "axios";
+import { NavLink } from "react-router-dom";
+import DescriptionImage from "./Image";
 
 function Detail(props) {
   const [roomDetail, setRoomDetail] = useState([]);
@@ -13,7 +15,9 @@ function Detail(props) {
   useEffect(() => {
     const RoomDetail = async () => {
       try {
-        const res = await axios.get("http://127.0.0.1:5000/user/room");
+        const res = await axios.get(
+          "https://backenfinal-prweb59.herokuapp.com/room"
+        );
         setRoomDetail(res.data);
       } catch (error) {
         console.log(error.message);
@@ -21,6 +25,10 @@ function Detail(props) {
     };
     RoomDetail();
   });
+
+  // const handleRoom = (roomCheck) => {
+  //   console.log("check room", roomCheck);
+  // };
 
   const slideLeft = () => {
     var slideCards = document.getElementById("slideCards");
@@ -59,12 +67,14 @@ function Detail(props) {
                       backgroundSize: "cover",
                     }}
                   ></div>
-                  <p className="card-img-title" >{roomDetail.title}</p>
-                  <p className="card-img-description">
-                    <p>Weekdayprice: {roomDetail.weekdayprice} </p>
-                    <br />
-                    <p>Weekendprice: {roomDetail.weekendprice} </p>
-                  </p>
+                  <NavLink to="">
+                    <p className="card-img-title">{roomDetail.title}</p>
+                    <p className="card-img-description">
+                      <p>Weekdayprice: {roomDetail.weekdayprice} </p>
+                      <br />
+                      <p>Weekendprice: {roomDetail.weekendprice} </p>
+                    </p>
+                  </NavLink>
                 </div>
               );
             })}
@@ -76,6 +86,8 @@ function Detail(props) {
           />
         </div>
       </div>
+
+      <DescriptionImage />
     </div>
   );
 }

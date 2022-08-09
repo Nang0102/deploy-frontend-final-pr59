@@ -9,6 +9,8 @@ import NavLinks from "./NavLinks";
 import Home from "./../home/Home";
 import Room from "./../rooms/Rooms";
 import Booking from "./../../page/booking/Booking";
+import { Contact } from "./../Contact/Contact";
+import Detail from "./../rooms/Detail/Detail";
 
 function Header() {
   // const activeClass = (params) => {
@@ -35,13 +37,15 @@ function Header() {
 
         <NavLinks />
         <NavLink className=" button  " to="/auth">
-          Login <FontAwesomeIcon icon={faArrowRight} />{" "}
+          Login <FontAwesomeIcon icon={faArrowRight} />
         </NavLink>
       </div>
       <Routes>
         <Route index path="/Home" element={<Home />} />
-        <Route path="/Rooms" element={<Room />} />
+        <Route path="/Rooms" exact element={<Room />} />
         <Route path="/The-Booking" element={<Booking />} />
+        <Route path="/Contact" element={<Contact />} />
+        <Route path="/Rooms/:id" element={<Detail />} />
       </Routes>
     </div>
   );

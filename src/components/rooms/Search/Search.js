@@ -51,13 +51,11 @@ export const Search = ({ placeholder, data }) => {
             {filteredData.slice().map((value, key) => {
               return (
                 <div>
-                  <a
+                  <a className="dataItem" href={`/Rooms/${value._id}`}>
+                    {/* <a
                     className="dataItem"
-                    href={`${window.location.origin.toString()}/room/${
-                      value._id
-                    }`}
-                  >
-                    {/* <a className="dataItem" href={`/room/${value._id}`}> */}
+                    href={`http://127.0.0.1:5000/room/${value._id}`}
+                  > */}
                     <p> {value.title}</p>
                   </a>
                 </div>

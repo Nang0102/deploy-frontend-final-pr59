@@ -15,11 +15,14 @@ function Signup() {
   };
 
   const handleSubmit = (email, username, password) => {
-    return axios.post("http://127.0.0.1:5000/user/sign-up", {
-      email,
-      username,
-      password,
-    });
+    return axios.post(
+      "https://backenfinal-prweb59.herokuapp.com/user/sign-up",
+      {
+        email,
+        username,
+        password,
+      }
+    );
   };
 
   const handleSignup = async (e) => {
