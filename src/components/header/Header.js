@@ -4,6 +4,9 @@ import { NavLink, Routes, Route } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
+// import { useContext } from "react";
+// import { LoginContext } from "../../context/AuthContext";
+
 import NavLinks from "./NavLinks";
 // import NavLinks from "./NavLinks";
 import Home from "./../home/Home";
@@ -11,6 +14,7 @@ import Room from "./../rooms/Rooms";
 import Booking from "./../../page/booking/Booking";
 import { Contact } from "./../Contact/Contact";
 import Detail from "./../rooms/Detail/Detail";
+// import "../auth/Auth";
 
 function Header() {
   // const activeClass = (params) => {
@@ -37,7 +41,8 @@ function Header() {
 
         <NavLinks />
         <NavLink className=" button  " to="/auth">
-          Login <FontAwesomeIcon icon={faArrowRight} />
+          Login
+          <FontAwesomeIcon icon={faArrowRight} />
         </NavLink>
       </div>
       <Routes>

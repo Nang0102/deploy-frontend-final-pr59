@@ -1,10 +1,11 @@
 .container-description {
     display: flex;
+    margin: 3% 40% 3%;
 }
 
 .hr {
     margin: auto;
-    width: 120px;
+    width: 115px;
     background-color: #000;
     height: 3px;
 }
