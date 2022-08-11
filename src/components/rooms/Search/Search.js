@@ -52,10 +52,6 @@ export const Search = ({ placeholder, data }) => {
               return (
                 <div>
                   <a className="dataItem" href={`/Rooms/${value._id}`}>
-                    {/* <a
-                    className="dataItem"
-                    href={`http://127.0.0.1:5000/room/${value._id}`}
-                  > */}
                     <p> {value.title}</p>
                   </a>
                 </div>

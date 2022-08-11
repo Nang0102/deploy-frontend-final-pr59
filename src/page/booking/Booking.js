@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { FaBars } from "react-icons/fa";
+import React from "react";
 import { FaUser } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -49,12 +48,12 @@ function Booking() {
         </nav>
       </header> */}
 
-      <p className="booking-container-h1"> Resort Booking Form</p>
+      <strong className="booking-container-h1"> Resort Booking Form</strong>
 
       <div className="booking-item">
         <div className="title">Book Now</div>
-        <div className="content">
-          <form action="#">
+        <div className="booking-content">
+          <form action="#" className="book-now">
             <div className="user-details">
               <div className="input-box">
                 <FaUser className="icon" />

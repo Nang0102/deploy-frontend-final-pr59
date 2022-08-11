@@ -71,16 +71,15 @@ function Login() {
 
   return (
     <div className="loginScreen">
+      {/* <button className="loginScreen__button" onClick={clickSignup}>
+        {signup ? "Sign Up" : "Sign In"}
+      </button> */}
       <div className="loginScreen__background">
-        <img
+        {/* <img
           className="loginScreen__logo"
           src="https://scontent.fhan2-4.fna.fbcdn.net/v/t1.15752-9/289077027_731210008115697_8505480625261202562_n.png?_nc_cat=105&ccb=1-7&_nc_sid=ae9488&_nc_ohc=RpkxJjw9o3IAX9M5dmX&tn=vy_40HxMuTcWo-oL&_nc_ht=scontent.fhan2-4.fna&oh=03_AVKhud9Evoz4i7GNV80TyK4sAlEm0_krI9KPr0XPdkaHYw&oe=62FB2F5D"
           alt=""
-        />
-
-        <button className="loginScreen__button" onClick={clickSignup}>
-          {signup ? "Sign Up" : "Sign In"}
-        </button>
+        /> */}
 
         <div className="loginScreen__gradient"></div>
       </div>
