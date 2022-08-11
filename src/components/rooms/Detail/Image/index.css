@@ -1,0 +1,10 @@
+.container-description {
+    display: flex;
+}
+
+.hr {
+    margin: auto;
+    width: 120px;
+    background-color: #000;
+    height: 3px;
+}

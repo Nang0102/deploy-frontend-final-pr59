@@ -1,0 +1,21 @@
+.content-rooms {
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+}
+
+.text-rooms {
+    color: #ffff;
+    position: center;
+    padding-top: 10%;
+    font-size: 300%;
+}
+
+.search-room {
+    display: flex;
+    padding-left: 60%;
+}
+
+.text-detail {
+    display: flex;
+}

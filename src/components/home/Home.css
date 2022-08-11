@@ -1,0 +1,177 @@
+/* .home {
+    position: relative;
+} */
+
+.content {
+    position: absolute;
+    /* top: 90%; */
+    margin-top: -150px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 60%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttonn {
+    align-items: flex-start;
+    background-color: #e4a853;
+    border-color: #e4a853;
+    border-style: solid;
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 22.5px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 18px 50px;
+    border-radius: 30px;
+    margin-top: 13px;
+    margin-bottom: 5px;
+}
+
+.buttonn:hover {
+    color: black;
+}
+
+.container-welcome {
+    /* max-width: 1300px; */
+    margin: 50px 70px 50px 70px;
+    padding: 0 15px;
+    color: black;
+}
+
+.left {
+    margin: 0 15px 0 0;
+    padding: 0 12%;
+    text-align: center;
+}
+
+.right {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.section-title {
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+.sub-title {
+    /* display: inline-block; */
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 4.8px;
+    line-height: 22.5px;
+    text-transform: uppercase;
+}
+
+.title-name {
+    font-family: DM Sans;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: -1.2px;
+    line-height: 60px;
+    /* text-transform: capitalize; */
+}
+
+.right-p {
+    margin-bottom: 80px;
+    color: #686868;
+    font-family: PT Serif;
+    line-height: 30px;
+    text-align: center;
+}
+
+.specials {
+    margin-top: 100px;
+}
+
+.container-special {
+    color: black;
+}
+
+.special-content {
+    display: block;
+    background-image: url("https://erios.webhotel.vn/images/home1_erios03.jpg");
+    color: white;
+}
+
+.special-ct {
+    padding: 80px 100px;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.875;
+}
+
+.special-img {
+    width: 100%;
+}
+
+.sp-title {
+    margin-bottom: 20px;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: -0.75px;
+}
+
+.sp-des {
+    margin-bottom: 20px;
+}
+
+.testimonials {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.tripadvisor {
+    background-color: #16a850;
+    padding: 65px 15px;
+}
+
+.icon-trip {
+    width: 105px;
+    height: 105px;
+    margin-left: 185px;
+}
+
+.tt {
+    color: white;
+    font-family: DM Sans;
+    font-weight: 700;
+    font-size: 140px;
+    letter-spacing: -1.2px;
+    line-height: 100px;
+    padding: 40px 0;
+}
+
+.star {
+    color: #e4a853;
+    font-size: 20px;
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.text {
+    font-size: 16px;
+    line-height: 30px;
+    margin: 15px 35px;
+}
+
+.avatar {
+    margin-bottom: 20px;
+    height: 50px;
+    width: 50px;
+    margin-left: 225px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.rate {
+    margin-top: 30px;
+}
