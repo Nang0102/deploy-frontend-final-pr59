@@ -32,10 +32,11 @@ export const Contact = () => {
         {/*src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.615593436863!2d106.65415201477133!3d10.76408024232994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752eec7752c743%3A0xd832d71bd12b6a15!2zRmxlbWluZ3RvbiBUb3dlciwgMTgyIEzDqiDEkOG6oWkgSMOgbmgsIHBoxrDhu51uZyAxNSwgUXXhuq1uIDExLCBI4buTIENow60gTWluaCwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1521530731757"  */}
         <br />
         <p>Email chúng tôi</p>
-        <b>INFO@WEBHOTEL.VN</b>
+        <b>MindX@Hotel.com</b>
+
         <br />
         <p>Điện thoại</p>
-        <b>0242 242 0777</b>
+        <b>0999977722</b>
         <br />
         <br />
         <br />

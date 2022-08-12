@@ -48,7 +48,21 @@ function Booking() {
         </nav>
       </header> */}
 
-      <strong className="booking-container-h1"> Resort Booking Form</strong>
+      <div
+        className="booking-container-h1"
+        style={{
+          color: "white",
+          fontSize: 35,
+          margin: "50px 0 1.5em",
+          letterSpacing: 5,
+          wordSpacing: 11,
+          textTransform: "capitalize",
+          fontWeight: 100,
+        }}
+      >
+        {" "}
+        Resort Booking Form
+      </div>
 
       <div className="booking-item">
         <div className="title">Book Now</div>
@@ -118,7 +132,7 @@ function Booking() {
                 </select>
               </div>
             </div>
-            <div className="button">
+            <div className="button-booking">
               <button id="reset-btn">Reset</button>
               <button type="submit" value="Submit" id="submit-btn">
                 Book Now

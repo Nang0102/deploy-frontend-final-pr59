@@ -222,14 +222,14 @@ option {
 
 /* ============================ BUTTON ============================ */
 
-form .button {
+form .button-booking {
     display: flex;
-    justify-booking-content: space-between;
+    justify-content: space-between;
     margin-right: 100px;
     margin-left: 10px;
 }
 
-form .button button {
+form .button-booking button {
     height: 100%;
     width: 100%;
     margin-top: 20px;
