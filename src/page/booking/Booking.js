@@ -7,6 +7,7 @@ import { FaCalendarAlt } from "react-icons/fa";
 import { FaUsers } from "react-icons/fa";
 import { FaHotel } from "react-icons/fa";
 import "./booking.css";
+import Modal from "../../components/chucmung";
 
 function Booking() {
   const [firtname, setfirtname] = useState("");
@@ -17,7 +18,10 @@ function Booking() {
   const [sdt, setsdt] =useState("");
   const [loaiphong, setloaiphong] =useState("");
   const [ngaytra, setngaytra] =useState("");
-  // const okii=false;
+  const [isToggled, setisToggled] =useState(false);
+  const [isToggledd, setisToggledd] =useState(false);
+  
+  
 
   // const [showClass, setShowClass] = useState(false);
   // const addShowClass = () => {
@@ -25,6 +29,8 @@ function Booking() {
   // };
   const datphong = async (e) => {
     e.preventDefault();
+    setisToggled(true);
+    setisToggledd(true);
     const data={
       firtname,
       lastname,
@@ -35,7 +41,8 @@ function Booking() {
       soluongnguoi,
       loaiphong
     };
-    const url = "http://localhost:5001/The-Booking"
+    // const url = "http://localhost:5001/The-Booking"
+    const url = "https://dohuykhanh.herokuapp.com/The-Booking"
     // console.log("giatri", e.target.value);
     // console.log("tendau", firtname);
     // console.log("tencuoi", lastname);
@@ -57,10 +64,11 @@ function Booking() {
       referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
       body: JSON.stringify(data) // body data type must match "Content-Type" header
     });
+    
     console.log("tendau", firtname);
     console.log("tencuoi", lastname);
     console.log("danhap", response.json());
-    alert("ban da dat phong thanh cong");
+    
     
   };
   const onchangefirtname = (event) => {
@@ -204,18 +212,19 @@ function Booking() {
                 
               </div>{" "}
             </div>{" "}
-            <div className="button">
-              <button id="reset-btn"> Reset </button>{" "}
-              <button id="submit-btn" onClick={datphong}>
+            <div className="button-booking">
+              <button className="reset-btn"> Reset </button>{" "}
+              <button className="reset-btn" onClick={datphong}>
                 Book Now{" "}
               </button>{" "}
-              {/* {okii==true && <button id="reset-btn"> sdfd </button>} */}
+              {isToggledd && <button className="reset-btn"> Xem Bills </button>}
+              {isToggled && <Modal  closemodal={setisToggled}/>}
             </div>{" "}
           </form>{" "}
         </div>{" "}
       </div>{" "}
     </div>
   );
-}
+} 
 
 export default Booking;
